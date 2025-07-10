@@ -10,6 +10,11 @@ const port = 4000
 
 const app = express()
 
+app.get('/', (req, res) => {
+    console.log('Hello World!, You connected successfully')
+    res.send('Hello World!, You connected successfully')
+})
+
 
 app.post('/upload', upload.single('avatar'), async (req, res) => {
     try {
